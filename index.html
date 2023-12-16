@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After: Algeria</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3799; /* Custom color */
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section {
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            transition: opacity 0.5s;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .section:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .before-after {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            position: relative;
+        }
+
+        .before,
+        .after {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards, rotateIn 1s ease-out forwards;
+            transition: opacity 0.5s;
+            position: relative;
+            background-color: #f0f0f0;
+            padding: 15px;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 20px;
+            color: #e74c3c; /* Custom color */
+            transform-origin: center;
+            animation: heartScale 0.1s ease-in-out, heartPop 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        @keyframes heartScale {
+            0%,
+            100% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        @keyframes heartPop {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section" ondblclick="addHeart(this)">
+        <h2>Cook</h2>
+        <div class="before-after">
+            <div class="before">
+                <!-- Ajoutez la balise vidéo ici avec le lien de votre vidéo -->
+                <video id="myVideo" controls width="100%" height="auto" src="Rick Rolled (Short Version).mp4" type="video/mp4"></video>
+                In the early days, Algerian cuisine heavily relied on traditional local ingredients such as couscous, olives, and regional spices. Meals were often prepared in an artisanal manner, highlighting traditional cooking methods.
+            </div>
+            <div class="after">
+                With the passage of time, the Algerian culinary landscape has been enriched by various cultures. Modern cooking techniques have become popular, and the introduction of new flavors and ingredients has led to a fusion of ancient culinary traditions and contemporary trends.
+            </div>
+            <div class="heart">❤️</div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+<div class="section" ondblclick="addHeart(this)">
+    <h2>Clothing</h2>
+    <div class="before-after">
+        <div class="before">
+            Traditional Algerian clothing served as a visual tapestry reflecting the cultural richness and ethnic diversity of the country. Garments like djellabas and burnouses, intricately handwoven, were not just pieces of clothing but symbols emphasizing the significance of preserving and embracing traditional attire.
+        </div>
+        <div class="after">
+            In the face of global influence and the evolving landscape of urbanization, Algerian fashion has undergone a metamorphosis. The modern clothing scene now harmoniously marries elements of traditional and contemporary styles. Innovative fabrics and designs cater to the demands of modern life, creating a fashion narrative that echoes the essence of Algerian heritage while embracing the spirit of the present.
+        </div>
+        <div class="heart">❤️</div>
+    </div>
+</div>
+
+<div class="section" ondblclick="addHeart(this)">
+    <h2>Technology</h2>
+    <div class="before-after">
+        <div class="before">
+            In the past, access to technology in Algeria was a scarce commodity. Communication predominantly relied on traditional means, and the utilization of information technology was confined to limited spheres.
+        </div>
+        <div class="after">
+            The landscape of technology in Algeria has undergone a revolution with the march of progress. Technological advancements have paved the way for widespread access, ushering in an era of modern telecommunications, high-speed internet, and the ubiquitous use of smartphones. This transformation has not only reshaped communication channels but has also democratized access to information on an unprecedented scale.
+        </div>
+        <div class="heart">❤️</div>
+    </div>
+</div>
+
+<div class="section" ondblclick="addHeart(this)">
+    <h2>Transportation</h2>
+    <div class="before-after">
+        <div class="before">
+            Traditional modes of transportation in Algeria were a testament to the geographical and cultural conditions, relying on means such as camels and carts that harmonized with the unique landscape.
+        </div>
+        <div class="after">
+            The tide of economic growth has ushered in significant changes to transportation. The introduction of modern road networks, the establishment of public transportation services, and the burgeoning development of the automotive industry have collectively reshaped the mobility landscape. This evolution reflects not just a shift in means but an intricate dance between tradition and progress.
+        </div>
+        <div class="heart">♥️</div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+    <script>
+        var clickCount = 0;
+
+        function addHeart(section) {
+            var heart = section.querySelector('.heart');
+            heart.style.opacity = 1;
+            setTimeout(function () {
+                heart.style.opacity = 0;
+            }, 2000); // Le cœur disparaît après 2 secondes
+
+            // Augmentez le compteur de clics
+            clickCount++;
+
+            // Si le compteur atteint 6 clics, affichez la vidéo
+            if (clickCount === 6) {
+                var myVideo = section.querySelector('#myVideo');
+                myVideo.style.display = 'block';
+                myVideo.play();
+            }
+        }
+    </script>
+</body>
+</html>
